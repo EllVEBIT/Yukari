@@ -1,5 +1,6 @@
 # Yukari
-A Discord bot written in Python originally for Solero.me's Discord. It sends phrases based on what's discussed on the server and more.
+A Discord bot originally made for Solero.me's Discord. It sends phrases based on what's 
+discussed on the server and more.
 
 ## Configuration
 A configuration sample is located in [config.ini](config.ini).
