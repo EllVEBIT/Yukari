@@ -45,14 +45,14 @@ class Markov(discord.Client):
 
 	def _refresh_magic_file(self):
 		try:
-			with open(self.magic_file, 'r+', encoding='utf-8', errors='ignore') as magic_file:
+			with open(self.magic_file, 'r', encoding='utf-8', errors='ignore') as magic_file:
 				text = magic_file.read()
 
 				self.markov = markovify.text.NewlineText(text)
 
 		except Exception as e:
-			print('Could not create magic file!')
-			print(e)
+			print('Magic file doesn\'t exist. Creating..')
+			open(self.magic_file, 'w+', encoding='utf-8', errors='ignore').close()
 
 	def add_phrase(self, phrase):
 		tokenized_phrase = phrase.split('. ')
