@@ -20,4 +20,7 @@ for cog_name in cogs:
 async def on_ready():
 	print('Logged in as:\n{0} (ID: {0.id})'.format(bot.user))
 
-bot.run(config['bot']['token'])
+token = os.environ.get('BOT_TOKEN') 
+
+# Твой токен
+bot.run(str(token))
